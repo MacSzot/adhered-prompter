@@ -22,4 +22,4 @@ addEventListener('hashchange',showTab); showTab();
   };
   mr.start(); setTimeout(()=>mr.stop(),2000);
 })();
-const BACKEND='__SET_BACKEND_URL__'; // <- podmienisz po deployu Railway
+const BACKEND = ''; // używa tego samego hosta (Vercel) → /api/whisper
