@@ -1,0 +1,8 @@
+html,body{margin:0;height:100%;background:#000;color:#fff;font-family:system-ui}
+#cam{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.45)}
+#ui{position:relative;z-index:2;display:grid;grid-template-rows:auto 1fr;height:100%}
+#tabs{display:flex;gap:16px;padding:10px 16px;background:#0008;backdrop-filter:blur(6px)}
+#tabs a{color:#fff;text-decoration:none;opacity:.8} #tabs a:hover{opacity:1}
+#panel{overflow:auto;padding:36px 10vw}
+.word{opacity:.5} .word.active{opacity:1}
+.tab{display:none}
