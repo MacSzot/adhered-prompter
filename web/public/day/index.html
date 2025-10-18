@@ -1,19 +1,58 @@
-<!doctype html><html lang="pl"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>adhered — Day</title><meta name="robots" content="noindex">
-<link rel="stylesheet" href="./styles.css">
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>adhered • day</title>
+  <!-- Zostawiamy istniejące style -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 <body>
-  <video id="cam" autoplay playsinline></video>
-  <div id="ui">
-    <div id="tabs">
-     <a href="#prompter">Prompter</a><a href="#rysownik">Rysownik</a><a href="#tbd">TBD</a>
-    </div>
-    <div id="panel">
-      <div id="prompter" class="tab"></div>
-      <<div id="rysownik" class="tab">Rysownik – wkrótce</div>
-      <div id="tbd" class="tab">TBD – wkrótce</div>
-    </div>
+  <div id="container">
+    <!-- Główny nagłówek / status (jeśli macie w CSS) -->
+    <header id="topbar">
+      <div class="left">Użytkownik: demo • <span id="dayLabel">Dzień 1</span></div>
+      <div class="chip" id="status">w toku</div>
+    </header>
+
+    <!-- TABS: tylko nazwy i docelowe hashe -->
+    <nav id="tabs">
+      <a href="#prompter">Prompter</a>
+      <a href="#rysownik">Rysownik</a>
+      <a href="#tbd">TBD</a>
+    </nav>
+
+    <!-- PANELS: identyfikatory MUSZĄ pasować do hash-y powyżej -->
+    <main id="panel">
+      <!-- Prompter (główna zakładka) -->
+      <section id="prompter" class="tab">
+        <!-- Zostawiamy miejsce na Waszą treść promptera / kamerę / tekst.
+             Jeśli app.js już to wypełnia/steruje, nic tu nie zmieniamy. -->
+        <div class="prompter-wrap">
+          <div class="video">
+            <video id="self" autoplay playsinline muted></video>
+          </div>
+          <div class="scroll">
+            <pre id="text" style="white-space:pre-wrap"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rysownik -->
+      <section id="rysownik" class="tab">
+        Rysownik – wkrótce
+        <!-- jeśli potrzebne: <img id="art" alt="Rysownik" /> -->
+      </section>
+
+      <!-- TBD -->
+      <section id="tbd" class="tab">
+        TBD – wkrótce
+      </section>
+    </main>
   </div>
+
+  <!-- Zostawiamy istniejące skrypty projektu -->
   <script src="./align.js"></script>
   <script src="./app.js"></script>
-</body></html>
+</body>
+</html>
